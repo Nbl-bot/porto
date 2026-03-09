@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nabil Oktora Ramadhan | Innovation Lab</title>
+    <!-- CSS Dependencies -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Lenis Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+</head>
+<body class="dark-mode">
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-wrapper">
+            <div class="cube-loader">
+                <div class="cube-face front"></div>
+                <div class="cube-face back"></div>
+                <div class="cube-face left"></div>
+                <div class="cube-face right"></div>
+                <div class="cube-face top"></div>
+                <div class="cube-face bottom"></div>
+            </div>
+            <h2 class="loader-text ls-2 mt-4">LAB<span>INITIALIZING</span></h2>
+        </div>
+    </div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-magic"></div>
+
+    <!-- BACKGROUND ENGINE -->
+    <div id="particles-js"></div>
+    <div class="cyber-grid"></div>
+    <div class="bg-glow"></div>
+
+    <!-- NAVBAR -->
+    <div id="scroll-progress"></div>
+    <nav class="navbar navbar-expand-lg fixed-top nav-lab">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">NABIL<span> OKTORA</span></a>
+            <div class="ms-auto d-flex align-items-center gap-4">
+                <a href="#work" class="nav-link-lab d-none d-md-block">Projects</a>
+                <a href="#contact" class="btn btn-cyber">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero-section">
+        <div class="container text-center">
+            <div class="hero-content" data-aos="zoom-out" data-aos-duration="1500">
+                <div class="badge-status mb-4">
+                    <span class="dot"></span> Digital Innovation Lab V.01
+                </div>
+                <h1 class="hero-title">
+                    <span class="text-reveal">Award-Winning</span><br>
+                    <span class="gradient-text">Innovation Leader.</span>
+                </h1>
+                <p class="hero-sub mt-4 max-w-700 mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Nabil Oktora Ramadhan — International Gold Medalist & Digital Business Strategist. 
+                    Merging <span class="text-white fw-bold">AI</span>, <span class="text-white fw-bold">startups</span>, and <span class="text-white fw-bold">innovation</span>.
+                </p>
+                <div class="hero-btns mt-5 d-flex justify-content-center gap-4">
+                    <a href="#work" class="btn-main">Explore My Work</a>
+                    <a href="#projects" class="btn-ghost">See My Projects</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <p>Scroll to Explore</p>
+        </div>
+    </section>
+
+    <!-- ABOUT SCROLL STORY -->
+    <section id="about" class="story-section">
+        <div class="container">
+            <div class="story-wrapper">
+                <div class="story-pin">
+                    <div class="story-content active" id="step-1">
+                        <span class="step-num">01</span>
+                        <h2>The Journey Begins</h2>
+                        <p class="lead">Nabil is a Digital Business student at Universitas Muhammadiyah Surakarta, specializing in tech-based business development and innovation research.</p>
+                    </div>
+                    <div class="story-content" id="step-2">
+                        <span class="step-num">02</span>
+                        <h2>Digital Catalyst</h2>
+                        <p class="lead">Experienced in UI/UX design and digital marketing. He has led projects ranging from AI-powered automation to custom charity platforms.</p>
+                    </div>
+                    <div class="story-content" id="step-3">
+                        <span class="step-num">03</span>
+                        <h2>Innovation Leader</h2>
+                        <p class="lead">Currently building solutions for digital payments at Netzme Pay and conducting R&D for empowering brilliance in business innovation.</p>
+                    </div>
+                </div>
+                <div class="story-visual">
+                    <div class="visual-box glass" id="visual-frame">
+                        <img src="../assets/images/6d55fc59edbf8b810febbb6f651c59e7.jpg" class="img-fluid" alt="Nabil" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="achieve-section section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-100">
+                <h6 class="ls-2 uppercase text-info mb-3">Recognition</h6>
+                <h2 class="display-4 fw-bold">Milestones of Excellence</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="medal-card glass-premium" data-tilt data-tilt-max="10">
+                        <div class="medal-icon gold">
+                            <i class="ri-medal-line"></i>
+                        </div>
+                        <h4 class="mt-4">Gold Medal</h4>
+                        <p class="text-muted">Global Youth Invention (GYIIF) 2026</p>
+                        <button class="btn-details" onclick="openModal('gyiif2026')">View Details</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="medal-card glass-premium" data-tilt data-tilt-max="10">
+                        <div class="medal-icon silver">
+                            <i class="ri-medal-line"></i>
+                        </div>
+                        <h4 class="mt-4">Silver Medal</h4>
+                        <p class="text-muted">Malaysia Technology Expo 2025</p>
+                        <button class="btn-details" onclick="openModal('mte2025')">View Details</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="medal-card glass-premium" data-tilt data-tilt-max="10">
+                        <div class="medal-icon silver">
+                            <i class="ri-medal-fill"></i>
+                        </div>
+                        <h4 class="mt-4">Silver Medal</h4>
+                        <p class="text-muted">Indonesia Inventors Day 2025</p>
+                        <button class="btn-details" onclick="openModal('iid2025')">View Details</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="medal-card glass-premium" data-tilt data-tilt-max="10">
+                        <div class="medal-icon silver">
+                            <i class="ri-award-line"></i>
+                        </div>
+                        <h4 class="mt-4">Silver Award</h4>
+                        <p class="text-muted">Asian Youth Innovation Awards 2025</p>
+                        <button class="btn-details" onclick="openModal('ayia2025')">View Details</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="medal-card glass-premium" data-tilt data-tilt-max="10">
+                        <div class="medal-icon secondary">
+                            <i class="ri-trophy-line"></i>
+                        </div>
+                        <h4 class="mt-4">2nd Place</h4>
+                        <p class="text-muted">International IoT Innovation Competition</p>
+                        <button class="btn-details" onclick="openModal('iot2025')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT LAB -->
+    <section id="work" class="lab-section section-padding">
+        <div class="container">
+            <div class="section-header mb-100">
+                <h6 class="ls-2 uppercase text-purple mb-3">Prototypes</h6>
+                <h2 class="display-4 fw-bold">Innovation Lab</h2>
+            </div>
+            
+            <div class="lab-grid">
+                <!-- AI Chatbot UMKM -->
+                <div class="lab-item" data-aos="zoom-in">
+                    <div class="lab-card glass-card" onclick="openProject('aichatbot')">
+                        <div class="lab-thumb">
+                            <div class="lab-overlay"></div>
+                            <img src="../assets/images/solo_umkm_thumb.png" alt="Solo UMKM AI" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hide-icon');">
+                            <i class="ri-robot-line hide-icon"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h3>Solo UMKM AI</h3>
+                            <p>AI chatbot to automate marketing for Solo small businesses.</p>
+                            <span class="lab-tag">AI & Marketing</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lazismu Charity -->
+                <div class="lab-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="lab-card glass-card" onclick="openProject('lazismu')">
+                        <div class="lab-thumb">
+                            <div class="lab-overlay"></div>
+                            <img src="../assets/images/lazismu_thumb.png" alt="Lazismu Turkey" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hide-icon');">
+                            <i class="ri-heart-line hide-icon"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h3>Lazismu Turkey</h3>
+                            <p>Full-stack charity website for article & donation management.</p>
+                            <span class="lab-tag">Web Platform</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- SI PALING KULIAH -->
+                <div class="lab-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="lab-card glass-card" onclick="openProject('sypaling')">
+                        <div class="lab-thumb">
+                            <div class="lab-overlay"></div>
+                            <img src="../assets/images/sipaling_thumb.png" alt="SI PALING KULIAH" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hide-icon');">
+                            <i class="ri-book-read-line hide-icon"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h3>SI PALING KULIAH</h3>
+                            <p>Ultimate student resource hub for academic success.</p>
+                            <span class="lab-tag">Education</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- PhysioConnect -->
+                <div class="lab-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="lab-card glass-card" onclick="openProject('physio')">
+                        <div class="lab-thumb">
+                            <div class="lab-overlay"></div>
+                            <img src="../assets/images/physio_porto.png" alt="PhysioConnect" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hide-icon');">
+                            <i class="ri-heart-pulse-line hide-icon"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h3>PhysioConnect</h3>
+                            <p>Digital physiotherapy platform with recovery tracking.</p>
+                            <span class="lab-tag">HealthTech</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- SYDSE -->
+                <div class="lab-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="lab-card glass-card" onclick="openProject('sydse')">
+                        <div class="lab-thumb">
+                            <div class="lab-overlay"></div>
+                            <i class="ri-store-2-line"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h3>SYDSE</h3>
+                            <span class="lab-tag">E-Commerce</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS ORBIT -->
+    <section id="skills" class="skills-section">
+        <div class="container text-center">
+            <div class="orbit-container">
+                <div class="orbit-center">
+                    <h3>Skills & Tools</h3>
+                </div>
+                <div class="orbit-item" data-desc="UI/UX design and modern web architecture.">UI/UX Design</div>
+                <div class="orbit-item" data-desc="Startup strategy and business development.">Digital Strategy</div>
+                <div class="orbit-item" data-desc="Implementing AI agents and chatbots.">AI Automation</div>
+                <div class="orbit-item" data-desc="Fullstack web and dashboard development.">Web Engineering</div>
+                <div class="orbit-item" data-desc="Data analysis for market research.">Data Insights</div>
+                <div class="orbit-item" data-desc="Fintech systems and QRIS integration.">Digital Payment</div>
+            </div>
+            <div id="skill-description" class="mt-5 text-muted lead mb-100">Hover over nodes to explore skills.</div>
+
+            <!-- Visual Tech Stack Grid -->
+            <div class="section-header text-center mb-50">
+                <h3 class="fw-bold mb-4">Core Technologies</h3>
+            </div>
+            
+            <div class="tech-stack-container">
+                <!-- HTML5 -->
+                <div class="tech-card" data-aos="zoom-in">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="tech-logo" alt="HTML5">
+                    <span class="tech-name">HTML5</span>
+                </div>
+                <!-- CSS3 -->
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="50">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="tech-logo" alt="CSS3">
+                    <span class="tech-name">CSS3</span>
+                </div>
+                <!-- JavaScript -->
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="tech-logo" alt="JavaScript">
+                    <span class="tech-name">JavaScript</span>
+                </div>
+                <!-- PHP -->
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="150">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="tech-logo" alt="PHP">
+                    <span class="tech-name">PHP</span>
+                </div>
+                <!-- SQL (MySQL/PostgreSQL) -->
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="tech-logo" alt="SQL">
+                    <span class="tech-name">SQL</span>
+                </div>
+                <!-- React -->
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="250">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="tech-logo" alt="React">
+                    <span class="tech-name">React</span>
+                </div>
+                <!-- Node.js -->
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="tech-logo" alt="Node.js">
+                    <span class="tech-name">Node.js</span>
+                </div>
+                <!-- TypeScript -->
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="350">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="tech-logo" alt="TypeScript">
+                    <span class="tech-name">TypeScript</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="journey" class="timeline-section section-padding">
+        <div class="container container-wide">
+            <h2 class="display-5 fw-bold mb-100 px-4">Journey Timeline</h2>
+            <div class="timeline-track">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-box glass">
+                        <h4>Enrollment</h4>
+                        <p>Digital Business at UMS & AI Chatbot Development for UMKM Solo Raya.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024 Dec</div>
+                    <div class="timeline-box glass">
+                        <h4>R&D Assistant</h4>
+                        <p>Research on business innovation at EMPOWERING BRILLIANCE.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 Feb</div>
+                    <div class="timeline-box glass">
+                        <h4>Innovation Awards</h4>
+                        <p>Silver Medals at Malaysia Tech Expo & Indonesia Inventors Day.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 Jul</div>
+                    <div class="timeline-box glass">
+                        <h4>Netzme Pay</h4>
+                        <p>Distribution Assistant for digital payment solutions (QRIS).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 Oct</div>
+                    <div class="timeline-box glass">
+                        <h4>Lazismu Project</h4>
+                        <p>Completion of the Charity & Article Management system.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2026 Jan</div>
+                    <div class="timeline-box glass">
+                        <h4>Gold Medal GYIIF</h4>
+                        <p>Top honor at Global Youth Invention & Innovation Fair 2026 for PhysioConnect.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-lab section-padding">
+        <div class="container text-center">
+            <div class="contact-panel glass-premium" data-aos="flip-up">
+                <h2 class="display-4 fw-bold mb-4">Launch Your Project?</h2>
+                <p class="lead text-muted mb-5">Let's collaborate on building the next big innovation.</p>
+                <div class="d-flex justify-content-center gap-4 flex-wrap">
+                    <a href="https://www.linkedin.com/in/nabiloktora/" target="_blank" rel="noopener noreferrer" class="social-btn glass"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>
+                    <a href="mailto:nabil@example.com" class="social-btn glass"><i class="ri-mail-send-fill"></i> Email</a>
+                    <a href="#" class="social-btn main-btn">Download CV <i class="ri-download-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-lab py-5 text-center">
+        <p class="opacity-50 mb-0">&copy; 2026 NABIL OKTORA RAMADHAN. SYSTEM INITIALIZED.</p>
+    </footer>
+
+    <!-- MODAL PORTS -->
+    <div id="modal-portal" class="modal-lab">
+        <div class="modal-glass">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- JS Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
