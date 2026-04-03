@@ -179,7 +179,7 @@ p:not(.hero-sub) {
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  z-index: 10001;
+  z-index: 99999;
   top: 0; left: 0;
   will-change: transform;
   transition:
