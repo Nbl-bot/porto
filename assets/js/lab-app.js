@@ -36,30 +36,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. OPTIMIZED CUSTOM CURSOR
     const cursor = document.querySelector('.cursor-magic');
-    const links = document.querySelectorAll('a, button, .lab-card, .medal-card, .orbit-item');
+    const isMobileDevice = window.innerWidth < 768;
 
-    // Use GSAP for smoother cursor movement (hardware accelerated)
-    gsap.set(cursor, { xPercent: -50, yPercent: -50 });
-    
-    window.addEventListener('mousemove', (e) => {
-        gsap.to(cursor, {
-            x: e.clientX,
-            y: e.clientY,
-            duration: 0.3,
-            ease: "power2.out"
-        });
-    });
+    if (!isMobileDevice && cursor) {
+        const links = document.querySelectorAll('a, button, .lab-card, .medal-card, .orbit-item');
 
-    links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-            cursor.classList.add('hover');
-            gsap.to(cursor, { scale: 1.5, duration: 0.3 });
+        // Use GSAP for smoother cursor movement (hardware accelerated)
+        gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+        
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, {
+                x: e.clientX,
+                y: e.clientY,
+                duration: 0.3,
+                ease: "power2.out"
+            });
         });
-        link.addEventListener('mouseleave', () => {
-            cursor.classList.remove('hover');
-            gsap.to(cursor, { scale: 1, duration: 0.3 });
+
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+                gsap.to(cursor, { scale: 1.5, duration: 0.3 });
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+                gsap.to(cursor, { scale: 1, duration: 0.3 });
+            });
         });
-    });
+    } else if (cursor) {
+        cursor.style.display = 'none';
+    }
 
     // 3. OPTIMIZED PARTICLES.JS
     particlesJS('particles-js', {
@@ -115,12 +121,21 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.set(item, { x: x, y: y, xPercent: -50, yPercent: -50 });
 
         item.addEventListener('mouseenter', () => {
-            desc.innerHTML = `<span class="text-white">${item.getAttribute('data-desc')}</span>`;
+            if (!isMobile) desc.innerHTML = `<span class="text-white">${item.getAttribute('data-desc')}</span>`;
         });
         item.addEventListener('mouseleave', () => {
-            desc.innerHTML = "Hover over nodes to explore skills.";
+            if (!isMobile) desc.innerHTML = "Hover over nodes to explore skills.";
+        });
+        
+        // Mobile tap support
+        item.addEventListener('click', () => {
+            desc.innerHTML = `<span class="text-white">${item.getAttribute('data-desc')}</span>`;
         });
     });
+
+    if (isMobile) {
+        desc.innerHTML = "Tap nodes to explore skills.";
+    }
 
     // Rotate Orbit
     gsap.to('.orbit-container', {
