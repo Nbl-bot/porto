@@ -1,440 +1,475 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nabiloktora</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <title>Nabil Oktora Ramadhan | Innovation Lab</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="assets/images/user-solid.svg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/color-1.css">
-    <link rel="stylesheet" href="assets/css/scroll-to-top-btn.css">
-    <link rel="stylesheet" href="assets/css/bottom- navigation-bar.css">
-    <link rel="stylesheet" href="assets/css/time and date widget.css">
-    <link rel="stylesheet" href="assets/css/time based greeting.css">
-
-    <!-- STLE SWITCHER -->
-    <link rel="stylesheet" href="assets/css/color-1.css" class="alternate-style" title="color-1" disabled>
-    <link rel="stylesheet" href="assets/css/color-2.css" class="alternate-style" title="color-2" disabled>
-    <link rel="stylesheet" href="assets/css/color-3.css" class="alternate-style" title="color-3" disabled>
-    <link rel="stylesheet" href="assets/css/color-4.css" class="alternate-style" title="color-4" disabled>
-    <link rel="stylesheet" href="assets/css/color-5.css" class="alternate-style" title="color-5" disabled>
-    <link rel="stylesheet" href="assets/css/color-6.css" class="alternate-style" title="color-6" disabled>
-    <link rel="stylesheet" href="assets/css/style-switcher.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/lab-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <style>
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        .reel-card {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            display: block;
+        }
+        .reel-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.6s var(--transition);
+        }
+        .reel-card:hover img {
+            transform: scale(1.05);
+        }
+        @media (max-width: 991px) {
+            .content-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 576px) {
+            .content-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#nav__menu">
-    
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg py-4 fixed-top bg-body" id="nav__menu">
-        <div class="container">
-            <a class="navbar-brand" href="#"><h4 class="fw-bold">Nabil Oktora </h4></a> 
-
-            <nav class="nav Container mx-auto">
-                <div class="nav__menu">
-                    <div class="nav__list">
-                        <li class="nav__item">
-                            <a href="#hero" class="nav__link active">
-                                <i class="bx bx-home-alt nav__icon"></i>
-                                <span class="nav__name">Home</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#k" class="nav__link">
-                                <i class="bx bx-wrench nav__icon"></i>
-                                <span class="nav__name">Services</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#s" class="nav__link">
-                                <i class="bx bx-briefcase-alt nav__icon"></i>
-                                <span class="nav__name">Work</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#g" class="nav__link">
-                                <i class="bx bx-book-alt nav__icon"></i>
-                                <span class="nav__name">Skills</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#b" class="nav__link">
-                                <i class="bx bx-message-square-detail nav__icon"></i>
-                                <span class="nav__name">Contact Me</span>
-                            </a>
-                        </li>
-                    </div>
-                </div>
-            </nav>
-            <div class="setting shadow">
-                <div class="style-switcher-toggler setting">
-                    <i class="bi bi-gear-fill"></i>
-                </div>
+<body class="dark-mode">
+    <div id="preloader">
+        <div class="loader-wrapper">
+            <div class="cube-loader">
+                <div class="cube-face front"></div>
+                <div class="cube-face back"></div>
+                <div class="cube-face left"></div>
+                <div class="cube-face right"></div>
+                <div class="cube-face top"></div>
+                <div class="cube-face bottom"></div>
             </div>
-        </div>    
+            <h2 class="loader-text ls-2 mt-4">LAB<span>INITIALIZING</span></h2>
+        </div>
+    </div>
+
+    <div class="cursor-magic"></div>
+    <div id="particles-js"></div>
+    <div class="cyber-grid"></div>
+    <div class="bg-glow"></div>
+
+    <div id="scroll-progress"></div>
+    <nav class="navbar navbar-expand-lg fixed-top nav-lab">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">NABIL<span> OKTORA</span></a>
+            <div class="ms-auto d-flex align-items-center gap-4">
+                <a href="#work" class="nav-link-lab d-none d-md-block">Projects</a>
+                <a href="#contact" class="btn btn-cyber">Contact</a>
+            </div>
+        </div>
     </nav>
 
-    <!-- HERO -->
-    <div id="hero" class="section-padding divider">
-        <div class="container">
-            <div class="row gy-4 align-items-center">
-                <div class="col-lg-5">
-                    <img src="assets/images/6d55fc59edbf8b810febbb6f651c59e7.jpg" class="img-fluid rounded-5" alt="" data-aos="fade-down" data-aos-delay="200">
+    <section id="hero" class="hero-section">
+        <div class="container text-center">
+            <div class="hero-content" data-aos="zoom-out" data-aos-duration="1500">
+                <div class="badge-status mb-4">
+                    <span class="dot"></span> Digital Innovation Lab V.01
                 </div>
-                <div class="col-lg-6">
-                    <h1 class="fw-bold display-4" data-aos="fade-up">I AM A CREATIVE<br/> <span class="text-info1"></span></h1>
-                    <p class="asd" data-aos="fade-up" data-aos-delay="200">Welcome to the virtual space that reflects my dedication to the world of creativity! I am excited to present this site as a platform to showcase my creative artistry. I hope you find inspiration and valuable insights while exploring this site. Happy exploring!!</p>
-                    <a href="#s" class="btn btn-outline-info me-3" data-aos="fade-up" data-aos-delay="300">My Work</a>
-                    <a href="#b" class="btn btn-info" data-aos="fade-up" data-aos-delay="400">Contact Me</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- SERVICES -->
-    <div class="karya section-padding divider" id="k">
-        <div class="container">
-            <div class="row">
-                <div class="col-12" data-aos="fade-up">
-                    <div class="intro-section text-center mb-4">
-                        <h1 class="fw-bold">My Services</h1>
-                        <!-- <p class="mx-auto">Berikut ini saya akan menyajikan layanan yang berfokus pada memberikan solusi kreatif dan inovatif</p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="row gy-4">
-             
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service border-hover p-4 shadow rounded-5">
-                        <div class="icon rounded-5"><i class="ri-pencil-ruler-2-fill"></i></div>
-                        <h5 class="mt-4 fw-bold">Web Design</h5>
-                        <p class="mb-0 asd">I will arrange the visual elements to ensure smooth navigation for users, taking into account layout factors, color schemes, typography, and imagery to create a visually appealing and coherent design.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service border-hover p-4 shadow rounded-5">
-                        <div class="icon rounded-5"><i class="ri-layout-masonry-fill"></i></div>
-                        <h5 class="mt-4 fw-bold">Public Speaking</h5>
-                            <p class="mb-0 asd">I will focus more on developing effective and persuasive communication skills in front of an audience, creating a delivery of messages that is engaging, clear, and able to build a connection with the listeners.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service border-hover p-4 shadow rounded-5">
-                        <div class="icon rounded-5"><i class="ri-landscape-fill"></i></div>
-                        <h5 class="mt-4 fw-bold">Visual Design</h5>
-                        <p class="mb-0 asd">I will focus more on the aesthetics and elements of a product or communication component to create a cohesive and visually appealing design, crafting a harmonious and engaging visual presentation to enhance the user experience.</p>
-                    </div>
+                <h1 class="hero-title">
+                    <span class="text-reveal">Award-Winning</span><br>
+                    <span class="gradient-text">Innovation Leader.</span>
+                </h1>
+                <p class="hero-sub mt-4 max-w-700 mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Nabil Oktora Ramadhan — International Gold Medalist, Digital Business Strategist & Content Creator. 
+                    Merging <span class="text-white fw-bold">AI</span>, <span class="text-white fw-bold">startups</span>, and <span class="text-white fw-bold">innovation</span>.
+                </p>
+                <div class="hero-btns mt-5 d-flex justify-content-center gap-4">
+                    <a href="#work" class="btn-main">Explore My Work</a>
+                    <a href="#projects" class="btn-ghost">See My Projects</a>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- WORK -->
-    <div class="section-padding divider" id="s">
-        <div class="container">
-            <div class="row">
-                <div class="col-12" data-aos="fade-up">
-                    <div class="intro-section text-center mb-4">
-                        <h1 class="fw-bold">My Work</h1>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row gy-4">
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="p-4 border-hover shadow rounded-5">
-                        <img src="assets/images/WEB3.png" class="img-fluid rounded-5" alt="">
-                        <span class="badge mt-4">UI Design</span>
-                        <a href="#" class="d-block mt-2 fw-bold"><h5 class="fw-bold">Project Heading</h5></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="p-4 border-hover shadow rounded-5">
-                        <img src="assets/images/WEB1.jpg" class="img-fluid rounded-5" alt="">
-                        <span class="badge mt-4">T SHIRT Design</span>
-                        <a href="#" class="d-block mt-2 fw-bold"><h5 class="fw-bold">Project Brand</h5></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="p-4 border-hover shadow rounded-5">
-                        <img src="assets/images/WEB4.JPG" class="img-fluid rounded-5" alt="">
-                        <span class="badge mt-4">UI Design</span>
-                        <a href="#" class="d-block mt-2 fw-bold"><h5 class="fw-bold">Project Heading</h5></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="p-4 border-hover shadow rounded-5">
-                        <img src="assets/images/WEB2.png" class="img-fluid rounded-5" alt="">
-                        <span class="badge mt-4">Canva Design</span>
-                        <a href="#" class="d-block mt-2 fw-bold"><h5 class="fw-bold">Project</h5></a>
-                    </div>
-                </div>
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-    <a href="https://lazismuturkey.org" class="text-decoration-none">
-        <div class="p-4 border-hover shadow rounded-5">
-            <img src="assets/images/WEB.png" class="img-fluid rounded-5" alt="">
-            <span class="badge mt-4">Web Develop</span>
-            <h5 class="fw-bold mt-2">Project Web</h5>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <p>Scroll to Explore</p>
         </div>
-    </a>
-</div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="p-4 border-hover shadow rounded-5">
-                        <img src="assets/images/WEB.JPG" class="img-fluid rounded-5" alt="">
-                        <span class="badge mt-4">UI Design</span>
-                        <a href="#" class="d-block mt-2 fw-bold"><h5 class="fw-bold">Project Heading</h5></a>
+    </section>
+
+    <section id="about" class="story-section">
+        <div class="container">
+            <div class="story-wrapper">
+                <div class="story-pin">
+                    <div class="story-content active" id="step-1">
+                        <span class="step-num">01</span>
+                        <h2>The Journey Begins</h2>
+                        <p class="lead">Nabil is a Digital Business student at Universitas Muhammadiyah Surakarta, specializing in tech-based business development and innovation research.</p>
+                    </div>
+                    <div class="story-content" id="step-2">
+                        <span class="step-num">02</span>
+                        <h2>Digital Catalyst & Content Creator</h2>
+                        <p class="lead">Experienced in UI/UX design, digital marketing, and creative content. He has led projects ranging from AI automation to custom charity platforms, as well as handling Humas & Marketing content.</p>
+                    </div>
+                    <div class="story-content" id="step-3">
+                        <span class="step-num">03</span>
+                        <h2>Innovation Leader</h2>
+                        <p class="lead">Currently building solutions for digital payments at Netzme Pay and conducting R&D for empowering brilliance in business innovation.</p>
+                    </div>
+                </div>
+                <div class="story-visual">
+                    <div class="visual-box glass" id="visual-frame">
+                        <img src="assets/images/6d55fc59edbf8b810febbb6f651c59e7.jpg" class="img-fluid" alt="Nabil" loading="lazy">
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- SKILL -->
-    <div class="section-padding divider" id="g">
+    <section id="achievements" class="achieve-section section-padding">
         <div class="container">
-            <div class="row">
-                <div class="col-12" data-aos="fade-up">
-                    <div class="intro-section text-center mb-5">
-                        <h1 class="fw-bold">My Skill</h1>
+            <div class="section-header text-center mb-100">
+                <h6 class="ls-2 uppercase text-info mb-3">Recognition</h6>
+                <h2 class="display-4 fw-bold">Milestones of Excellence</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="medal-card glass-premium" data-tilt data-tilt-max="10">
+                        <div class="medal-icon gold">
+                            <i class="ri-medal-line"></i>
+                        </div>
+                        <h4 class="mt-4">Gold Medal</h4>
+                        <p class="text-muted">Global Youth Invention (GYIIF) 2026</p>
+                        <button class="btn-details" onclick="openModal('gyiif2026')">View Details</button>
                     </div>
                 </div>
-            </div>
-            <div class="row g-md-5 g-4">
-                <div class="col-md-6">
-                    <div class="row gy-4">
-                        <div class="col-12">
-                            <div>
-                                <h5 class="small" data-aos="fade-up" data-aos-delay="100">Public Speaking</h5>
-                                <div class="progress" data-aos="fade-up" data-aos-delay="100" role="progressbar" aria-label="Example with label" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 90%">90%</div>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="medal-card glass-premium" data-tilt data-tilt-max="10">
+                        <div class="medal-icon silver">
+                            <i class="ri-medal-line"></i>
                         </div>
-                        <div class="col-12">
-                            <div>
-                                <h5 class="small" data-aos="fade-up" data-aos-delay="200">Work Team</h5>
-                                <div class="progress" data-aos="fade-up" data-aos-delay="200" role="progressbar" aria-label="Example with label" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 80%">80%</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div>
-                                <h5 class="small" data-aos="fade-up" data-aos-delay="300">English</h5>
-                                <div class="progress" data-aos="fade-up" data-aos-delay="300" role="progressbar" aria-label="Example with label" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 50%">50%</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>                   
-                <div class="col-md-6">
-                    <div class="row gy-4">
-                        <div class="col-12">
-                            <div>
-                                <h5 class="small" data-aos="fade-up" data-aos-delay="100">Canva</h5>
-                                <div class="progress" data-aos="fade-up" data-aos-delay="100" role="progressbar" aria-label="Example with label" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 80%">80%</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div>
-                                <h5 class="small" data-aos="fade-up" data-aos-delay="200">Multitasking</h5>
-                                <div class="progress" data-aos="fade-up" data-aos-delay="200" role="progressbar" aria-label="Example with label" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 85%">85%</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div>
-                                <h5 class="small" data-aos="fade-up" data-aos-delay="300">Capcut</h5>
-                                <div class="progress" data-aos="fade-up" data-aos-delay="300" role="progressbar" aria-label="Example with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar" style="width: 75%">75%</div>
-                                </div>
-                            </div>  
-                        </div>
-                    </div>
-                </div>                   
-            </div>
-        </div>
-    </div>
-
-    <!-- C0NTACT ME -->
-      <div class="section-padding" id="b">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="intro-section text-center mb-5">
-                        <h1 class="fw-bold" data-aos="fade-up">Contact Me</h1>
+                        <h4 class="mt-4">Silver Medal</h4>
+                        <p class="text-muted">Malaysia Technology Expo 2025</p>
+                        <button class="btn-details" onclick="openModal('mte2025')">View Details</button>
                     </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <form id="contactForm" class="row g-3" data-aos="fade-up" data-aos-delay="200">
-                        <div class="form-group col-md-6">
-                            <input type="text" id="name" class="form-control" placeholder="Enter Name" required>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="medal-card glass-premium" data-tilt data-tilt-max="10">
+                        <div class="medal-icon silver">
+                            <i class="ri-medal-fill"></i>
                         </div>
-                        <div class="form-group col-md-6">
-                            <input type="email" id="email" class="form-control" placeholder="Enter Email" required>
+                        <h4 class="mt-4">Silver Medal</h4>
+                        <p class="text-muted">Indonesia Inventors Day 2025</p>
+                        <button class="btn-details" onclick="openModal('iid2025')">View Details</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="medal-card glass-premium" data-tilt data-tilt-max="10">
+                        <div class="medal-icon silver">
+                            <i class="ri-award-line"></i>
                         </div>
-                        <div class="form-group col-md-12">
-                            <input type="text" id="subject" class="form-control" placeholder="Enter Subject" required>
+                        <h4 class="mt-4">Silver Award</h4>
+                        <p class="text-muted">Asian Youth Innovation Awards 2025</p>
+                        <button class="btn-details" onclick="openModal('ayia2025')">View Details</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="medal-card glass-premium" data-tilt data-tilt-max="10">
+                        <div class="medal-icon secondary">
+                            <i class="ri-trophy-line"></i>
                         </div>
-                        <div class="form-group col-md-12">
-                            <textarea id="message" class="form-control" rows="5" placeholder="Enter Message" required></textarea>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <button type="button" id="sendButton" class="btn btn-outline-primary">Send Message</button>
-                        </div>
-                    </form>
+                        <h4 class="mt-4">2nd Place</h4>
+                        <p class="text-muted">International IoT Innovation Competition</p>
+                        <button class="btn-details" onclick="openModal('iot2025')">View Details</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        document.getElementById('sendButton').addEventListener('click', function() {
-            // Get input values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            // Validate inputs
-            if (!name || !email || !subject || !message) {
-                alert('Please fill out all fields.');
-                return;
-            }
-
-            // Format WhatsApp message
-            const whatsappMessage = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
-
-            // Open WhatsApp URL
-            const whatsappURL = `https://wa.me/628888034201?text=${encodeURIComponent(whatsappMessage)}`;
-            window.open(whatsappURL, '_blank');
-        });
-    </script>
-
-    <!-- FOOTER -->
-  <footer class="py-5 bg-info text-white">
+    <section id="work" class="lab-section section-padding">
         <div class="container">
-            <div class="row align-items-center justify-content-between mb-3">
-                <div class="col-md-6">
-                    <p class="mb-0"><i class="ri-copyright-fill"></i> 2024, Nabil Oktora</p>
+            <div class="section-header mb-100">
+                <h6 class="ls-2 uppercase text-purple mb-3">Prototypes</h6>
+                <h2 class="display-4 fw-bold">Innovation Lab</h2>
+            </div>
+            <div class="lab-grid">
+                <div class="lab-item" data-aos="zoom-in">
+                    <div class="lab-card glass-card" onclick="openProject('aichatbot')">
+                        <div class="lab-thumb">
+                            <div class="lab-overlay"></div>
+                            <img src="assets/images/solo_umkm_thumb.png" alt="Solo UMKM AI" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hide-icon');">
+                            <i class="ri-robot-line hide-icon"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h3>Solo UMKM AI</h3>
+                            <p>AI chatbot to automate marketing for Solo small businesses.</p>
+                            <span class="lab-tag">AI & Marketing</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-auto text-end d-flex mb-3">
-                    <!-- GitHub Link -->
-                    <a href="https://github.com/yourgithubusername" class="btn btn-outline-info ms-2 btn-icon nav-link" target="_blank" rel="noopener noreferrer">
-                        <i class="ri-github-fill"></i>
+                <div class="lab-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="lab-card glass-card" onclick="openProject('lazismu')">
+                        <div class="lab-thumb">
+                            <div class="lab-overlay"></div>
+                            <img src="assets/images/lazismu_thumb.png" alt="Lazismu Turkey" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hide-icon');">
+                            <i class="ri-heart-line hide-icon"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h3>Lazismu Turkey</h3>
+                            <p>Full-stack charity website for article & donation management.</p>
+                            <span class="lab-tag">Web Platform</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lab-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="lab-card glass-card" onclick="openProject('sypaling')">
+                        <div class="lab-thumb">
+                            <div class="lab-overlay"></div>
+                            <img src="assets/images/sipaling_thumb.png" alt="SI PALING KULIAH" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hide-icon');">
+                            <i class="ri-book-read-line hide-icon"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h3>SI PALING KULIAH</h3>
+                            <p>Ultimate student resource hub for academic success.</p>
+                            <span class="lab-tag">Education</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lab-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="lab-card glass-card" onclick="openProject('physio')">
+                        <div class="lab-thumb">
+                            <div class="lab-overlay"></div>
+                            <img src="assets/images/physio_porto.png" alt="PhysioConnect" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hide-icon');">
+                            <i class="ri-heart-pulse-line hide-icon"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h3>PhysioConnect</h3>
+                            <p>Digital physiotherapy platform with recovery tracking.</p>
+                            <span class="lab-tag">HealthTech</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lab-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="lab-card glass-card" onclick="openProject('sydse')">
+                        <div class="lab-thumb">
+                            <div class="lab-overlay"></div>
+                            <i class="ri-store-2-line"></i>
+                        </div>
+                        <div class="lab-info">
+                            <h3>SYDSE</h3>
+                            <span class="lab-tag">E-Commerce</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="content-creator" class="lab-section section-padding">
+        <div class="container">
+            <div class="section-header mb-100 text-center">
+                <h6 class="ls-2 uppercase text-purple mb-3">Content Creator Portfolio</h6>
+                <h2 class="display-4 fw-bold" style="font-size: 2.5rem;">Humas & Marketing RS UMS AR FACHRUDIN</h2>
+                <p class="text-muted mt-3">Hasil karya Feeds, Poster, dan Reels Instagram selama magang (Desember 2025 - Maret 2026).</p>
+            </div>
+            <div class="content-grid">
+                <div class="lab-item" data-aos="zoom-in">
+                    <a href="https://www.instagram.com/reel/DV7eMFcCaFU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="reel-card" title="Click to view Instagram post">
+                        <img src="assets/images/jangan lupa magang ya.png" alt="Jangan Lupa Magang Ya" loading="lazy">
                     </a>
-                    
-                    <!-- Instagram Link -->
-                    <a href="https://instagram.com/nbllokt" class="btn btn-outline-info ms-2 btn-icon nav-link" target="_blank" rel="noopener noreferrer">
-                        <i class="ri-instagram-fill"></i>
+                </div>
+                <div class="lab-item" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="https://www.instagram.com/reel/DUAN2t6CUrX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="reel-card" title="Click to view Instagram post">
+                        <img src="assets/images/cfd colomadu.png" alt="CFD Colomadu" loading="lazy">
                     </a>
-                    
-                    <!-- Bootstrap Link -->
-                    <a href="https://getbootstrap.com" class="btn btn-outline-info ms-2 btn-icon nav-link" target="_blank" rel="noopener noreferrer">
-                        <i class="ri-bootstrap-fill"></i>
+                </div>
+                <div class="lab-item" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="https://www.instagram.com/reel/DTCjEpaiaGD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="reel-card" title="Click to view Instagram post">
+                        <img src="assets/images/baby spa.png" alt="Baby Spa" loading="lazy">
                     </a>
-                    
-                    <!-- CodePen Link -->
-                    <a href="https://codepen.io/yourcodepenusername" class="btn btn-outline-info ms-2 btn-icon nav-link" target="_blank" rel="noopener noreferrer">
-                        <i class="ri-codepen-fill"></i>
+                </div>
+                <div class="lab-item" data-aos="zoom-in" data-aos-delay="300">
+                    <a href="https://www.instagram.com/reel/DSjWGGjidfJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="reel-card" title="Click to view Instagram post">
+                        <img src="assets/images/cfd slamet.png" alt="CFD Slamet Riyadi" loading="lazy">
+                    </a>
+                </div>
+                <div class="lab-item" data-aos="zoom-in" data-aos-delay="400">
+                    <a href="https://www.instagram.com/reel/DSmrofrkgHj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="reel-card" title="Click to view Instagram post">
+                        <img src="assets/images/kenyamanan.png" alt="Kenyamanan" loading="lazy">
+                    </a>
+                </div>
+                <div class="lab-item" data-aos="zoom-in" data-aos-delay="500">
+                    <a href="https://www.instagram.com/reel/DSkOjOFiSXH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="reel-card" title="Click to view Instagram post">
+                        <img src="assets/images/hari ibu.png" alt="Hari Ibu" loading="lazy">
                     </a>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container text-center">
+            <div class="orbit-container">
+                <div class="orbit-center">
+                    <h3>Skills & Tools</h3>
+                </div>
+                <div class="orbit-item" data-desc="UI/UX design and modern web architecture.">UI/UX Design</div>
+                <div class="orbit-item" data-desc="Startup strategy and business development.">Digital Strategy</div>
+                <div class="orbit-item" data-desc="Implementing AI agents and chatbots.">AI Automation</div>
+                <div class="orbit-item" data-desc="Fullstack web and dashboard development.">Web Engineering</div>
+                <div class="orbit-item" data-desc="Data analysis for market research.">Data Insights</div>
+                <div class="orbit-item" data-desc="Fintech systems and QRIS integration.">Digital Payment</div>
+            </div>
+            <div id="skill-description" class="mt-5 text-muted lead mb-100">Hover over nodes to explore skills.</div>
+
+            <div class="section-header text-center mb-50">
+                <h3 class="fw-bold mb-4">Core Technologies</h3>
+            </div>
+            <div class="tech-stack-container">
+                <div class="tech-card" data-aos="zoom-in">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="tech-logo" alt="HTML5">
+                    <span class="tech-name">HTML5</span>
+                </div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="50">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="tech-logo" alt="CSS3">
+                    <span class="tech-name">CSS3</span>
+                </div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="tech-logo" alt="JavaScript">
+                    <span class="tech-name">JavaScript</span>
+                </div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="150">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="tech-logo" alt="PHP">
+                    <span class="tech-name">PHP</span>
+                </div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="tech-logo" alt="SQL">
+                    <span class="tech-name">SQL</span>
+                </div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="250">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="tech-logo" alt="React">
+                    <span class="tech-name">React</span>
+                </div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="tech-logo" alt="Node.js">
+                    <span class="tech-name">Node.js</span>
+                </div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="350">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="tech-logo" alt="TypeScript">
+                    <span class="tech-name">TypeScript</span>
+                </div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" class="tech-logo" alt="Canva">
+                    <span class="tech-name">Canva</span>
+                </div>
+                <div class="tech-card" data-aos="zoom-in" data-aos-delay="450">
+                    <i class="ri-video-edit-fill tech-logo" style="font-size: 3rem; color: #a855f7; display: block; margin: 0 auto 15px;"></i>
+                    <span class="tech-name">CapCut</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="timeline-section section-padding">
+        <div class="container container-wide">
+            <h2 class="display-5 fw-bold mb-100 px-4">Journey Timeline</h2>
+            <div class="timeline-track">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-box glass">
+                        <h4>Enrollment</h4>
+                        <p>Digital Business at UMS & AI Chatbot Development for UMKM Solo Raya.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024 Dec</div>
+                    <div class="timeline-box glass">
+                        <h4>R&D Assistant</h4>
+                        <p>Research on business innovation at EMPOWERING BRILLIANCE.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 Feb</div>
+                    <div class="timeline-box glass">
+                        <h4>Innovation Awards</h4>
+                        <p>Silver Medals at Malaysia Tech Expo & Indonesia Inventors Day.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 Jul</div>
+                    <div class="timeline-box glass">
+                        <h4>Netzme Pay</h4>
+                        <p>Distribution Assistant for digital payment solutions (QRIS).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 Oct</div>
+                    <div class="timeline-box glass">
+                        <h4>Lazismu Project</h4>
+                        <p>Completion of the Charity & Article Management system.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 Dec</div>
+                    <div class="timeline-box glass">
+                        <h4>Humas & Marketing Intern</h4>
+                        <p>Content Creator internship at RS UMS AR FACHRUDIN (Dec 2025 - Mar 2026).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2026 Jan</div>
+                    <div class="timeline-box glass">
+                        <h4>Gold Medal GYIIF</h4>
+                        <p>Top honor at Global Youth Invention & Innovation Fair 2026 for PhysioConnect.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-lab section-padding">
+        <div class="container text-center">
+            <div class="contact-panel glass-premium" data-aos="flip-up">
+                <h2 class="display-4 fw-bold mb-4">Launch Your Project?</h2>
+                <p class="lead text-muted mb-5">Let's collaborate on building the next big innovation.</p>
+                <div class="d-flex justify-content-center gap-4 flex-wrap">
+                    <a href="https://www.linkedin.com/in/nabiloktora/" target="_blank" rel="noopener noreferrer" class="social-btn glass"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>
+                    <a href="mailto:nabil@example.com" class="social-btn glass"><i class="ri-mail-send-fill"></i> Email</a>
+                    <a href="#" class="social-btn main-btn">Download CV <i class="ri-download-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-lab py-5 text-center">
+        <p class="opacity-50 mb-0">&copy; 2026 NABIL OKTORA RAMADHAN. SYSTEM INITIALIZED.</p>
     </footer>
-    
 
-    <div class="event shadow">
-        <div class="event-img">
-            <img src="assets/images/7030bd3eaa251bdd2623acdac949f542-removebg-preview.png" alt="">
+    <div id="modal-portal" class="modal-lab">
+        <div class="modal-glass">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="modal-content"></div>
         </div>
     </div>
 
-    <div class="scrollToTop-btn">
-        <i class="bx bx-up-arrow-alt"></i>
-    </div>
-
-    <div class="style-switcher shadow">
-        <div class="asdf">
-            <p class="asdf-text">Theme Colors <i class="bi bi-moon-stars-fill shadow" id="theme-button"></i></p>
-        </div>
-        <div class="colors">
-            <span class="color-1 bTn activE" onclick="setActiveStyle('color-1')"></span>
-            <span class="color-2 bTn" onclick="setActiveStyle('color-2')"></span>
-            <span class="color-3 bTn" onclick="setActiveStyle('color-3')"></span>
-            <span class="color-4 bTn" onclick="setActiveStyle('color-4')"></span>
-            <span class="color-5 bTn" onclick="setActiveStyle('color-5')"></span>
-            <span class="color-6 bTn" onclick="setActiveStyle('color-6')"></span>
-        </div>
-        <div class="widget" id="date-time-widget">
-            <div id="date-contaIner"></div>
-            <div class="shadow" id="time-contaIner"></div>
-            <div id="greetingWidget">
-                <p id="greetingText">Selamat Pagi!</p>
-            </div
-        </div>
-    </div>
-
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="assets/js/switcher.js"></script>
-    <script src="assets/js/time and date.js"></script>
-    <script src="assets/js/time based greeting.js"></script>
-    <script src="assets/js/news ticker.js"></script>
-    <script src="assets/js/scrool to top.js"></script>
-
-
-    <script>
-        var typed = new Typed('.text-info1', {
-            strings: ['Social Enterprise ', 'VISUAL DESIGN', 'GRAPHIC DESIGN'],
-            typeSpeed: 50,
-            backSpeed: 50,
-            loop: true,
-        })
-        
-        var swiper = new Swiper(".karya-swiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            navigation: {
-            nextEl: ".btn-prev3",
-            prevEl: ".btn-next3",
-            },
-            breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-            },
-            280: {
-                slidesPerView: 1,
-                spaceBetween: 1,
-            },
-            480: {
-                slidesPerView: 2,
-                spaceBetween: 1,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-            },
-            },
-        });
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="assets/js/lab-app.js"></script>
 </body>
 </html>
